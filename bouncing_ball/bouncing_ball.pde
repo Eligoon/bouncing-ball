@@ -3,8 +3,8 @@ float x = 200;
 float y = 200;
 
 // declaring and initializing speed for both directions
-float xSpeed = 2;
-float ySpeed = 4;
+float xSpeed = random(2,5);
+float ySpeed = random(1,6);
 
 // declared and initializing colors for circle (0,0,0) RGB
 float red;
@@ -40,7 +40,7 @@ void draw()
   }
 
   //If ball hits ceiling or floor bounce back
-  if (( y > height ) || ( y < 0 ))
+  if (( y > height) || ( y < 0 ))
   {
     ySpeed = ySpeed * -1; // reverse vertical direction
     // randomizing color when hitting an edge
