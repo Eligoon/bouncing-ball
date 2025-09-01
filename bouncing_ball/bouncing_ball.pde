@@ -10,6 +10,8 @@ float red;
 float green;
 float blue;
 
+float circleSize = 25;
+
 void setup()
 {
   size(400, 400);
@@ -30,6 +32,7 @@ void draw()
     red = random(255);
     green = random(255);
     blue = random(255);
+    circleSize = random(25, 75);
   }
 
   //If ball hits ceiling or floor bounce back
@@ -39,11 +42,12 @@ void draw()
     red = random(255);
     green = random(255);
     blue = random(255);
+    circleSize = random(25, 75);
   }
 
 
   // drawing the circle
   stroke(0);
-  fill(red,green,blue);
-  ellipse(x, y, 25, 25);
+  fill(red, green, blue);
+  circle(x, y, circleSize);
 }
