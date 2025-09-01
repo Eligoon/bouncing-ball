@@ -6,10 +6,12 @@ float y = 200;
 float xSpeed = 2;
 float ySpeed = 4;
 
+// declared and initializing colors for circle (0,0,0) RGB
 float red;
 float green;
 float blue;
 
+//declared and initializing circle size
 float circleSize = 25;
 
 void setup()
@@ -26,22 +28,26 @@ void draw()
   y = y + ySpeed;
 
   // If ball hits left or right edge, bounce back
-  if ((x > width) ||( x < 0))
+  if (( x > width ) ||( x < 0 ))
   {
     xSpeed = xSpeed * -1; // reverse horizontal direction
+    // randomizing color when hitting an edge
     red = random(255);
     green = random(255);
     blue = random(255);
+    //randomizing circle size when hitting edge
     circleSize = random(25, 75);
   }
 
   //If ball hits ceiling or floor bounce back
-  if ((y > height) || ( y < 0))
+  if (( y > height ) || ( y < 0 ))
   {
     ySpeed = ySpeed * -1; // reverse vertical direction
+    // randomizing color when hitting an edge
     red = random(255);
     green = random(255);
     blue = random(255);
+    //randomizing circle size when hitting edge
     circleSize = random(25, 75);
   }
 
